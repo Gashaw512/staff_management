@@ -1,5 +1,5 @@
 {
-  "homepage": "http://Gashaw512.github.io/staff_load_mngmnt",
+  "homepage": "http://Gashaw512.github.io/staff_management",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -55,6 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
- 
 }
