@@ -42,8 +42,8 @@ const StaffForm = (props) => {
             temp.lastName = fieldValues.lastName ? "" : "This field is required."
         if ('email' in fieldValues)
             temp.email = (/$^|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
-        if ('phone' in fieldValues)
-            temp.phone = fieldValues.phone.length > 9 ? "" : "Minimum 10 numbers required."
+        if ('staffID' in fieldValues)
+            temp.staffID = fieldValues.staffID ? "" : "This field is required."
         if ('academicRankID' in fieldValues)
             temp.academicRankID = fieldValues.academicRankID.length != 0 ? "" : "This field is required."
         setErrors({
@@ -63,15 +63,12 @@ const StaffForm = (props) => {
         resetForm
     } = useForm(initialFValues, true, validate);
 
-   
-
     const handleSubmit = e => {
         e.preventDefault()
-
-        // if (validate()) {
+         if (validate()) {
         console.log(' kkkkk');
         addOredit(values, resetForm)
-        // }
+     }
     }
 
     useEffect(() => {
@@ -152,7 +149,7 @@ const StaffForm = (props) => {
                         options={employeeService.getAcademicRankCollection()}
                         value={values.academicRankID}
                         onChange={handleInputChange}
-                        error={errors.academicRank}
+                        error={errors.academicRankID}
                         size="small"
                         style={{ margin: 10 }}
                     />

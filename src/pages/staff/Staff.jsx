@@ -303,7 +303,6 @@ const Staff = () => {
                 </Controls.ActionButton>
               </TableCell>
             </TableRow>))
-
           ) : 'No Employee'}
         </TableBody>
       </TblContainer>
